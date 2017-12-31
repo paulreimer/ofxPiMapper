@@ -49,13 +49,13 @@ void ofApp::messageReceived(ofMessage & message){
 */
 void ofApp::handleController(ControllerCommand com){
 	if(com == ControllerCommand::COMMAND_LEFT){
-		mapper.moveSelection(Vec3(-5.0f, 0.0f, 0.0f));
+		mapper.moveSelection(ofx::piMapper::Vec3(-5.0f, 0.0f, 0.0f));
 	}else if(com == ControllerCommand::COMMAND_RIGHT){
-		mapper.moveSelection(Vec3(5.0f, 0.0f, 0.0f));
+		mapper.moveSelection(ofx::piMapper::Vec3(5.0f, 0.0f, 0.0f));
 	}else if(com == ControllerCommand::COMMAND_UP){
-		mapper.moveSelection(Vec3(0.0f, -5.0f, 0.0f));
+		mapper.moveSelection(ofx::piMapper::Vec3(0.0f, -5.0f, 0.0f));
 	}else if(com == ControllerCommand::COMMAND_DOWN){
-		mapper.moveSelection(Vec3(0.0f, 5.0f, 0.0f));
+		mapper.moveSelection(ofx::piMapper::Vec3(0.0f, 5.0f, 0.0f));
 	}else if(com == ControllerCommand::COMMAND_A){
 		if(mapper.getMode() == ofx::piMapper::Mode::MAPPING_MODE){
 			mapper.selectNextVertex();
